@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <title>Kodluyoruz</title>
+</head>
+
+<body>
+    
+    <div class="container">
+        <footer class="bg-info text-center mb-3 p-2">
+            <h3 class="text-white m-0">Kodluyoruz Ödev</h3>
+        </footer>
+        <div class="row">
+            <div class="col-4">
+                <!-- müşteri ekleme -->
+                <div class="card" style="height: 120px;">
+                    <div class="card-body d-flex">
+                        <div>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">İsim</span>
+                                </div>
+                                <input type="text" class="form-control" id="userName">
+                            </div>
+
+                            <div class="input-group ">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Bakiye</span>
+                                </div>
+                                <input type="text" class="form-control" id="userBalance">
+                            </div>
+                        </div>
+                        <button class="btn btn-info ml-2 font-weight-bold" onclick="javascript:addUser()">Ekle</button>
+                    </div>
+                </div>
+
+                <!-- müşteriler -->
+                <div class="card mt-3 ">
+                    <div class="card-header">
+                        Müşteriler
+                    </div>
+                    <div id="customers" class="card-body" style="height: 100%;">
+                        <!-- <div class="d-flex justify-content-around border-bottom mt-2">
+                            <p class="m-0 p-0">Mecit SEZGİN</p>
+                            <p class="m-0 p-0 font-weight-bold">1000 TL</p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- para transferi -->
+            <div class="col-8">
+                <div class="card" style="height: 120px;">
+                    <div class="card-body d-flex justify-content-around">
+                        <div class="mr-2">
+                            <select id="sending-customer" class="custom-select custom-select-sm mb-2" >
+                                <option selected>Gönderen Müşteri</option>
+                            </select>
+
+                            <select id="receiving-customer" class="custom-select custom-select-sm" >
+                                <option selected>Alıcı Müşteri</option>
+                            </select>
+                        </div>
+
+
+                        <div class="d-flex align-items-center ">
+                            <div class="input-group ">
+                                <div class="input-group-prepend ">
+                                    <span class="input-group-text">Tutar</span>
+                                </div>
+                                <input type="text" class="form-control" id="money">
+                            </div>
+                        </div>
+
+                        <button class="btn btn-info ml-2 font-weight-bold" onclick="javascript:transfer()">Gönder</button>
+
+                    </div>
+                </div>
+
+                <!-- işlemler -->
+                <div class="card mt-3 ">
+                    <div class="card-header">
+                        İşlemler
+                    </div>
+                    <div id="history" class="card-body">
+                        <!-- <div class="d-flex border-bottom mt-2">
+                            <p class="m-0 p-0 pr-2 font-weight-bold">2022:02:14 00:18 :</p>
+                            <p class="m-0 p-0 pr-2"> Mecit -> Ahmet 1000 TL gönderdi</p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+
+    <script src="controler.js"></script>
+    <script>
+        // function Li() {
+        //     const subscriber = document.getElementById("user-list")
+        //     const newLi = document.createElement("li");
+            
+        //     newLi.innerText = "mecit"
+        //     newLi.setAttribute("data-id", 1);
+                
+        //     // newLi.style = "font-weight:bold;";
+        //     newLi.className = "list-group-item d-flex justify-content-between align-items-center"
+                  
+        //     subscriber.appendChild(newLi);
+            
+        // }
+
+        // function Li() {
+        //     const subscriber = document.getElementById("customers")
+        //     const newDiv = document.createElement("div");
+        //     newDiv.setAttribute("data-id", 1);
+        //     newDiv.className ="d-flex justify-content-around border-bottom mt-2"
+        //     subscriber.appendChild(newDiv);
+
+
+        //     const newP1 = document.createElement("p");
+        //     newP1.innerText = document.getElementById("userName").value;
+        //     newP1.className="m-0 p-0"
+        //     newDiv.appendChild(newP1);
+
+        //     const newP2 = document.createElement("p");
+        //     newP2.innerText = document.getElementById("userBalance").value + " TL"
+        //     newP2.className = "m-0 p-0 font-weight-bold"
+        //     newDiv.appendChild(newP2);
+        // }
+    </script>
+</body>
+
+</html>
