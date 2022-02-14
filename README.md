@@ -4,6 +4,4 @@
 
 <div ">
   <img src="https://raw.githubusercontent.com/patika-167-react-bootcamp/hw-week-2-mecitsezginn/main/image/1.png" title="hover text">
-  <img src="https://raw.githubusercontent.com/patika-167-react-bootcamp/hw-week-2-mecitsezginn/main/image/2.png" title="hover text">
-  <img src="https://raw.githubusercontent.com/patika-167-react-bootcamp/hw-week-2-mecitsezginn/main/image/3.png" title="hover text">
 </div>
