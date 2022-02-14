@@ -3,6 +3,7 @@
 # Banka para transeferi örneği
 
 <div ">
-  <img src="https://raw.githubusercontent.com/mecitsezginn/object_detection_with_react_native/main/foto/1.jpeg" width="200" title="hover text">
-  <img src="https://raw.githubusercontent.com/mecitsezginn/object_detection_with_react_native/main/foto/2.jpeg" width="200" title="hover text">
+  <img src="https://raw.githubusercontent.com/patika-167-react-bootcamp/hw-week-2-mecitsezginn/main/image/1.png" width="200" title="hover text">
+  <img src="https://raw.githubusercontent.com/patika-167-react-bootcamp/hw-week-2-mecitsezginn/main/image/2.png" width="200" title="hover text">
+  <img src="https://raw.githubusercontent.com/patika-167-react-bootcamp/hw-week-2-mecitsezginn/main/image/3.png" width="200" title="hover text">
 </div>
