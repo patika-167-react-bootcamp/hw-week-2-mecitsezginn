@@ -2,6 +2,4 @@
 
 # Banka para transferi
 
-<div ">
-  <img src="https://raw.githubusercontent.com/patika-167-react-bootcamp/hw-week-2-mecitsezginn/main/image/1.png" title="hover text">
-</div>
+
