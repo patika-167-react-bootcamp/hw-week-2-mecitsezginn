@@ -120,19 +120,22 @@ const transfer = () => {
                 return true;
             }
         })
-
-        if(Number(sendingCustomerInfo[0].balance) - Number(transferAmount) >= 0){
-            updateState(sendingCustomerInfo[0].id, Number(sendingCustomerInfo[0].balance) - Number(transferAmount));
-            updateState(receivingCustomerInfo[0].id, Number(receivingCustomerInfo[0].balance) + Number(transferAmount));
-
-            const myMessage = sendingCustomerInfo[0].name + " -> " + receivingCustomerInfo[0].name +" "+ String(transferAmount) + " TL gönderdi.";
-            history(myMessage);
+        if(Number(transferAmount) > 0){
+            if(Number(sendingCustomerInfo[0].balance) - Number(transferAmount) >= 0){
+                updateState(sendingCustomerInfo[0].id, Number(sendingCustomerInfo[0].balance) - Number(transferAmount));
+                updateState(receivingCustomerInfo[0].id, Number(receivingCustomerInfo[0].balance) + Number(transferAmount));
+    
+                const myMessage = sendingCustomerInfo[0].name + " -> " + receivingCustomerInfo[0].name +" "+ String(transferAmount) + " TL gönderdi.";
+                history(myMessage);
+            }
+            else{
+                alert("Yetersiz bakiye")
+            }
+            document.getElementById("money").value = "";
         }
         else{
-            alert("Yetersiz bakiye")
+            alert("Transfer ücreti 0'dan büyük olmalı")
         }
-
-        document.getElementById("money").value = "";
     }
 }
 
