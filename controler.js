@@ -194,23 +194,6 @@ const myDate = () => {
     fullYear = fullYear.split(".")
     return fullYear[2] + ":" + fullYear[1] + ":" + fullYear[0] + " " + fullTime
 }
-const historyList = (message) => {
-    const his = document.getElementById("history");
-    const newDiv = document.createElement("div");
-    newDiv.className = "d-flex border-bottom mt-2"
-    his.appendChild(newDiv);
-
-    const newP1 = document.createElement("p");
-    newP1.innerText = myDate() + " : ";
-    newP1.className = "m-0 p-0 pr-2 font-weight-bold"
-    newDiv.appendChild(newP1);
-
-    const newP2 = document.createElement("p");
-    newP2.innerText = message;
-    newP2.className = "m-0 p-0 pr-2"
-    newDiv.appendChild(newP2);
-}
-
 const historyTransferList = (list, subscriber) => {
     list.forEach((item) => {
         const newDiv = document.createElement("div");
